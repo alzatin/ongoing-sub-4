@@ -24,16 +24,16 @@
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.16,
+      "x": 0.031349999999999996,
+      "y": 0.19,
       "uniqueID": "id-1619",
       "name": "Pivotno",
       "type": "number"
     },
     {
       "atomType": "Rectangle",
-      "x": 0.21179883945841393,
-      "y": 0.28398791540785495,
+      "x": 0.216,
+      "y": 0.7190332326283988,
       "uniqueID": "id-1663",
       "ioValues": [
         {
@@ -60,8 +60,8 @@
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.256,
+      "x": 0.031349999999999996,
+      "y": 0.304,
       "uniqueID": "id-3486",
       "name": "geom",
       "type": "geometry"
@@ -126,16 +126,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0264,
-          "y": 0.16,
+          "x": 0.031349999999999996,
+          "y": 0.19,
           "uniqueID": "id-3508",
           "name": "3D-Shape",
           "type": "geometry"
         },
         {
           "atomType": "Input",
-          "x": 0.0264,
-          "y": 0.256,
+          "x": 0.031349999999999996,
+          "y": 0.304,
           "uniqueID": "id-3509",
           "name": "Fillet val",
           "type": "number"
@@ -257,8 +257,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6167718665464382,
-      "y": 0.4682779456193354,
+      "x": 0.6140667267808837,
+      "y": 0.7280966767371602,
       "uniqueID": "id-3629",
       "name": "Fillet",
       "ioValues": [
@@ -315,16 +315,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0264,
-          "y": 0.16,
+          "x": 0.031349999999999996,
+          "y": 0.19,
           "uniqueID": "id-3624",
           "name": "3D-Shape",
           "type": "geometry"
         },
         {
           "atomType": "Input",
-          "x": 0.0264,
-          "y": 0.256,
+          "x": 0.031349999999999996,
+          "y": 0.304,
           "uniqueID": "id-3625",
           "name": "Fillet val",
           "type": "number"
