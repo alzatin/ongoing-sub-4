@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "Pivotno",
-      "ioValue": 48
+      "ioValue": 3,
+      "currentEquation": "3"
     },
     {
       "name": "geom",
@@ -24,8 +25,8 @@
     },
     {
       "atomType": "Input",
-      "x": 0.031349999999999996,
-      "y": 0.19,
+      "x": 0.0264,
+      "y": 0.16,
       "uniqueID": "id-1619",
       "name": "Pivotno",
       "type": "number"
@@ -48,20 +49,20 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.45175834084761046,
-      "y": 0.4259818731117825,
+      "x": 0.44815148782687103,
+      "y": 0.4471299093655589,
       "uniqueID": "id-3468",
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 48
+          "ioValue": 3
         }
       ]
     },
     {
       "atomType": "Input",
-      "x": 0.031349999999999996,
-      "y": 0.304,
+      "x": 0.0264,
+      "y": 0.256,
       "uniqueID": "id-3486",
       "name": "geom",
       "type": "geometry"
@@ -126,16 +127,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.031349999999999996,
-          "y": 0.19,
+          "x": 0.0264,
+          "y": 0.16,
           "uniqueID": "id-3508",
           "name": "3D-Shape",
           "type": "geometry"
         },
         {
           "atomType": "Input",
-          "x": 0.031349999999999996,
-          "y": 0.304,
+          "x": 0.0264,
+          "y": 0.256,
           "uniqueID": "id-3509",
           "name": "Fillet val",
           "type": "number"
@@ -257,8 +258,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6140667267808837,
-      "y": 0.7280966767371602,
+      "x": 0.6086564472497745,
+      "y": 0.7401812688821753,
       "uniqueID": "id-3629",
       "name": "Fillet",
       "ioValues": [
@@ -315,16 +316,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.031349999999999996,
-          "y": 0.19,
+          "x": 0.0264,
+          "y": 0.16,
           "uniqueID": "id-3624",
           "name": "3D-Shape",
           "type": "geometry"
         },
         {
           "atomType": "Input",
-          "x": 0.031349999999999996,
-          "y": 0.304,
+          "x": 0.0264,
+          "y": 0.256,
           "uniqueID": "id-3625",
           "name": "Fillet val",
           "type": "number"
