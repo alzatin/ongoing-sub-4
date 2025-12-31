@@ -1,495 +1,495 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "01e278b0-4910-484c-bdc0-8458b001eb66",
-    "name": "ongoing-sub-4",
-    "ioValues": [
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "01e278b0-4910-484c-bdc0-8458b001eb66",
+  "name": "ongoing-sub-4",
+  "ioValues": [
+    {
+      "name": "Pivotno",
+      "ioValue": 48
+    },
+    {
+      "name": "geom",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0264,
+      "y": 0.16,
+      "uniqueID": "id-1619",
+      "name": "Pivotno",
+      "type": "number"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.21179883945841393,
+      "y": 0.28398791540785495,
+      "uniqueID": "id-1663",
+      "ioValues": [
         {
-            "name": "Pivotno",
-            "ioValue": 48
+          "name": "x length",
+          "ioValue": 10
         },
         {
-            "name": "geom",
-            "ioValue": 10
+          "name": "y length",
+          "ioValue": 10
         }
-    ],
-    "topLevel": true,
-    "allAtoms": [
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3742746615087041,
+      "y": 0.19637462235649547,
+      "uniqueID": "id-1667",
+      "ioValues": [
         {
-            "atomType": "Output",
-            "x": 0.98,
-            "y": 0.5,
-            "uniqueID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5084067253803043,
+      "y": 0.5226586102719033,
+      "uniqueID": "id-3468",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 48
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0264,
+      "y": 0.256,
+      "uniqueID": "id-3486",
+      "name": "geom",
+      "type": "geometry"
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.6589434661723819,
+      "y": 0.3595166163141994,
+      "uniqueID": "id-3513",
+      "name": "Fillet",
+      "ioValues": [
+        {
+          "name": "Fillet val",
+          "ioValue": 2.5
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-3504"
         },
         {
-            "atomType": "Input",
-            "x": 0.0264,
-            "y": 0.16,
-            "uniqueID": "id-1619",
-            "name": "Pivotno",
-            "type": "number"
+          "atomType": "Code",
+          "x": 0.5181236673773987,
+          "y": 0.4924471299093656,
+          "uniqueID": "id-3505",
+          "ioValues": [
+            {
+              "name": "fillet",
+              "ioValue": 2.5
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n         {inputName: \"shape2\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n      console.log(importedShape)\n      if (!importedShape){\n        importedShape =library[shape2]\n      }\n      //This makes a new copy of the shape and moves it in the X direction\n      //let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n      let filletAssembly =  await Fillet(importedShape, fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletAssembly],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
         },
         {
-            "atomType": "Rectangle",
-            "x": 0.21179883945841393,
-            "y": 0.28398791540785495,
-            "uniqueID": "id-1663",
-            "ioValues": [
-                {
-                    "name": "x length",
-                    "ioValue": 10
-                },
-                {
-                    "name": "y length",
-                    "ioValue": 10
-                }
-            ]
+          "atomType": "Circle",
+          "x": 0.19632495164410058,
+          "y": 0.38253012048192775,
+          "uniqueID": "id-3506",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 10
+            }
+          ]
         },
         {
-            "atomType": "Extrude",
-            "x": 0.3742746615087041,
-            "y": 0.19637462235649547,
-            "uniqueID": "id-1667",
-            "ioValues": [
-                {
-                    "name": "height",
-                    "ioValue": 10
-                }
-            ]
+          "atomType": "Extrude",
+          "x": 0.32941176470588235,
+          "y": 0.2054380664652568,
+          "uniqueID": "id-3507",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
         },
         {
-            "atomType": "Extrude",
-            "x": 0.5084067253803043,
-            "y": 0.5226586102719033,
-            "uniqueID": "id-3468",
-            "ioValues": [
-                {
-                    "name": "height",
-                    "ioValue": 48
-                }
-            ]
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.16,
+          "uniqueID": "id-3508",
+          "name": "3D-Shape",
+          "type": "geometry"
         },
         {
-            "atomType": "Input",
-            "x": 0.0264,
-            "y": 0.256,
-            "uniqueID": "id-3486",
-            "name": "geom",
-            "type": "geometry"
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.256,
+          "uniqueID": "id-3509",
+          "name": "Fillet val",
+          "type": "number"
         },
         {
-            "atomType": "GitHubMolecule",
-            "x": 0.6589434661723819,
-            "y": 0.3595166163141994,
-            "uniqueID": "id-3513",
-            "name": "Fillet",
-            "ioValues": [
-                {
-                    "name": "Fillet val",
-                    "ioValue": 2.5
-                }
-            ],
-            "topLevel": false,
-            "allAtoms": [
-                {
-                    "atomType": "Output",
-                    "x": 0.98,
-                    "y": 0.5,
-                    "uniqueID": "id-3504"
-                },
-                {
-                    "atomType": "Code",
-                    "x": 0.5181236673773987,
-                    "y": 0.4924471299093656,
-                    "uniqueID": "id-3505",
-                    "ioValues": [
-                        {
-                            "name": "fillet",
-                            "ioValue": 2.5
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n         {inputName: \"shape2\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n      console.log(importedShape)\n      if (!importedShape){\n        importedShape =library[shape2]\n      }\n      //This makes a new copy of the shape and moves it in the X direction\n      //let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n      let filletAssembly =  await Fillet(importedShape, fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletAssembly],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
-                },
-                {
-                    "atomType": "Circle",
-                    "x": 0.19632495164410058,
-                    "y": 0.38253012048192775,
-                    "uniqueID": "id-3506",
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "x": 0.32941176470588235,
-                    "y": 0.2054380664652568,
-                    "uniqueID": "id-3507",
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Input",
-                    "x": 0.0264,
-                    "y": 0.16,
-                    "uniqueID": "id-3508",
-                    "name": "3D-Shape",
-                    "type": "geometry"
-                },
-                {
-                    "atomType": "Input",
-                    "x": 0.0264,
-                    "y": 0.256,
-                    "uniqueID": "id-3509",
-                    "name": "Fillet val",
-                    "type": "number"
-                },
-                {
-                    "atomType": "Assembly",
-                    "x": 0.5226890756302521,
-                    "y": 0.2779456193353474,
-                    "uniqueID": "id-3510",
-                    "ioValues": [
-                        {
-                            "name": "Shape 1",
-                            "ioValue": null
-                        },
-                        {
-                            "name": "Shape 2",
-                            "ioValue": null
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Rectangle",
-                    "x": 0.20682302771855013,
-                    "y": 0.8096676737160121,
-                    "uniqueID": "id-3511",
-                    "ioValues": [
-                        {
-                            "name": "x length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "y length",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "x": 0.3521008403361344,
-                    "y": 0.7885196374622356,
-                    "uniqueID": "id-3512",
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 2
-                        }
-                    ]
-                }
-            ],
-            "allConnectors": [
-                {
-                    "ap2Name": "number or geometry",
-                    "ap1ID": "id-3505",
-                    "ap2ID": "id-3504"
-                },
-                {
-                    "ap2Name": "geometry",
-                    "ap1ID": "id-3506",
-                    "ap2ID": "id-3507"
-                },
-                {
-                    "ap2Name": "Shape 1",
-                    "ap1ID": "id-3507",
-                    "ap2ID": "id-3510"
-                },
-                {
-                    "ap2Name": "shape2",
-                    "ap1ID": "id-3507",
-                    "ap2ID": "id-3505"
-                },
-                {
-                    "ap2Name": "shape",
-                    "ap1ID": "id-3508",
-                    "ap2ID": "id-3505"
-                },
-                {
-                    "ap2Name": "fillet",
-                    "ap1ID": "id-3509",
-                    "ap2ID": "id-3505"
-                },
-                {
-                    "ap2Name": "geometry",
-                    "ap1ID": "id-3511",
-                    "ap2ID": "id-3512"
-                },
-                {
-                    "ap2Name": "Shape 2",
-                    "ap1ID": "id-3512",
-                    "ap2ID": "id-3510"
-                }
-            ],
-            "parentRepo": {
-                "lastFoundGit": "2025-12-31T10:23:39.329Z",
-                "privateRepo": false,
-                "repoName": "Fillet",
-                "dateCreated": "2025-09-11T17:53:30Z",
-                "likes": 0,
-                "readMe": "https://raw.githubusercontent.com/alzatin/Fillet/master/README.md?sanitize=true",
-                "yyyy": 2025,
-                "topMoleculeID": "af7414ca-2d93-4ac0-abbd-27feee4ef8f1",
-                "githubMoleculesUsed": [],
-                "html_url": "https://github.com/alzatin/Fillet",
-                "topics": [
-                    "abundance-tool"
-                ],
-                "parentRepo": null,
-                "forks": 0,
-                "dateModified": "739615",
-                "ranking": 0.9,
-                "searchField": "fillet alzatin fillet operation: receives a 3d shape and fillets the shape by a given value.  abundance-tool",
-                "owner": "alzatin",
-                "description": "Fillet operation: Receives a 3D shape and fillets the shape by a given value. ",
-                "contentURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.svg?sanitize=true",
-                "isLocal": false
+          "atomType": "Assembly",
+          "x": 0.5226890756302521,
+          "y": 0.2779456193353474,
+          "uniqueID": "id-3510",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
             },
-            "unitsKey": "Inches",
-            "fileTypeVersion": 1
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
         },
         {
-            "atomType": "GitHubMolecule",
-            "x": 0.6283595922150139,
-            "y": 0.676737160120846,
-            "uniqueID": "id-3540",
-            "name": "Fillet",
-            "ioValues": [
-                {
-                    "name": "Fillet val",
-                    "ioValue": 0.5
-                }
-            ],
-            "topLevel": false,
-            "allAtoms": [
-                {
-                    "atomType": "Output",
-                    "x": 0.98,
-                    "y": 0.5,
-                    "uniqueID": "id-3541"
-                },
-                {
-                    "atomType": "Code",
-                    "x": 0.5181236673773987,
-                    "y": 0.4924471299093656,
-                    "uniqueID": "id-3542",
-                    "ioValues": [
-                        {
-                            "name": "fillet",
-                            "ioValue": 0.5
-                        }
-                    ],
-                    "codeVersion": 1,
-                    "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n         {inputName: \"shape2\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n      console.log(importedShape)\n      if (!importedShape){\n        importedShape =library[shape2]\n      }\n      //This makes a new copy of the shape and moves it in the X direction\n      //let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n      let filletAssembly =  await Fillet(importedShape, fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletAssembly],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
-                },
-                {
-                    "atomType": "Circle",
-                    "x": 0.19632495164410058,
-                    "y": 0.38253012048192775,
-                    "uniqueID": "id-3543",
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "x": 0.32941176470588235,
-                    "y": 0.2054380664652568,
-                    "uniqueID": "id-3544",
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Input",
-                    "x": 0.0264,
-                    "y": 0.16,
-                    "uniqueID": "id-3545",
-                    "name": "3D-Shape",
-                    "type": "geometry"
-                },
-                {
-                    "atomType": "Input",
-                    "x": 0.0264,
-                    "y": 0.256,
-                    "uniqueID": "id-3546",
-                    "name": "Fillet val",
-                    "type": "number"
-                },
-                {
-                    "atomType": "Assembly",
-                    "x": 0.5226890756302521,
-                    "y": 0.2779456193353474,
-                    "uniqueID": "id-3547",
-                    "ioValues": [
-                        {
-                            "name": "Shape 1",
-                            "ioValue": null
-                        },
-                        {
-                            "name": "Shape 2",
-                            "ioValue": null
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Rectangle",
-                    "x": 0.20682302771855013,
-                    "y": 0.8096676737160121,
-                    "uniqueID": "id-3548",
-                    "ioValues": [
-                        {
-                            "name": "x length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "y length",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "x": 0.3521008403361344,
-                    "y": 0.7885196374622356,
-                    "uniqueID": "id-3549",
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 2
-                        }
-                    ]
-                }
-            ],
-            "allConnectors": [
-                {
-                    "ap2Name": "number or geometry",
-                    "ap1ID": "id-3542",
-                    "ap2ID": "id-3541"
-                },
-                {
-                    "ap2Name": "geometry",
-                    "ap1ID": "id-3543",
-                    "ap2ID": "id-3544"
-                },
-                {
-                    "ap2Name": "Shape 1",
-                    "ap1ID": "id-3544",
-                    "ap2ID": "id-3547"
-                },
-                {
-                    "ap2Name": "shape2",
-                    "ap1ID": "id-3544",
-                    "ap2ID": "id-3542"
-                },
-                {
-                    "ap2Name": "shape",
-                    "ap1ID": "id-3545",
-                    "ap2ID": "id-3542"
-                },
-                {
-                    "ap2Name": "fillet",
-                    "ap1ID": "id-3546",
-                    "ap2ID": "id-3542"
-                },
-                {
-                    "ap2Name": "geometry",
-                    "ap1ID": "id-3548",
-                    "ap2ID": "id-3549"
-                },
-                {
-                    "ap2Name": "Shape 2",
-                    "ap1ID": "id-3549",
-                    "ap2ID": "id-3547"
-                }
-            ],
-            "parentRepo": {
-                "lastFoundGit": "2025-12-31T10:23:39.329Z",
-                "privateRepo": false,
-                "repoName": "Fillet",
-                "dateCreated": "2025-09-11T17:53:30Z",
-                "likes": 0,
-                "readMe": "https://raw.githubusercontent.com/alzatin/Fillet/master/README.md?sanitize=true",
-                "yyyy": 2025,
-                "topMoleculeID": "af7414ca-2d93-4ac0-abbd-27feee4ef8f1",
-                "githubMoleculesUsed": [],
-                "html_url": "https://github.com/alzatin/Fillet",
-                "topics": [
-                    "abundance-tool"
-                ],
-                "parentRepo": null,
-                "forks": 0,
-                "dateModified": "739615",
-                "ranking": 0.9,
-                "searchField": "fillet alzatin fillet operation: receives a 3d shape and fillets the shape by a given value.  abundance-tool",
-                "owner": "alzatin",
-                "description": "Fillet operation: Receives a 3D shape and fillets the shape by a given value. ",
-                "contentURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.abundance?sanitize=true",
-                "svgURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.svg?sanitize=true",
-                "isLocal": false
+          "atomType": "Rectangle",
+          "x": 0.20682302771855013,
+          "y": 0.8096676737160121,
+          "uniqueID": "id-3511",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10
             },
-            "unitsKey": "Inches",
-            "fileTypeVersion": 1
+            {
+              "name": "y length",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.3521008403361344,
+          "y": 0.7885196374622356,
+          "uniqueID": "id-3512",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 2
+            }
+          ]
         }
-    ],
-    "allConnectors": [
+      ],
+      "allConnectors": [
         {
-            "ap2Name": "height",
-            "ap1ID": "id-1619",
-            "ap2ID": "id-3468"
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-3505",
+          "ap2ID": "id-3504"
         },
         {
-            "ap2Name": "geometry",
-            "ap1ID": "id-1663",
-            "ap2ID": "id-1667"
+          "ap2Name": "geometry",
+          "ap1ID": "id-3506",
+          "ap2ID": "id-3507"
         },
         {
-            "ap2Name": "3D-Shape",
-            "ap1ID": "id-1667",
-            "ap2ID": "id-3513"
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-3507",
+          "ap2ID": "id-3510"
         },
         {
-            "ap2Name": "3D-Shape",
-            "ap1ID": "id-1667",
-            "ap2ID": "id-3540"
+          "ap2Name": "shape2",
+          "ap1ID": "id-3507",
+          "ap2ID": "id-3505"
         },
         {
-            "ap2Name": "number or geometry",
-            "ap1ID": "id-3468",
-            "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+          "ap2Name": "shape",
+          "ap1ID": "id-3508",
+          "ap2ID": "id-3505"
         },
         {
-            "ap2Name": "geometry",
-            "ap1ID": "id-3486",
-            "ap2ID": "id-3468"
+          "ap2Name": "fillet",
+          "ap1ID": "id-3509",
+          "ap2ID": "id-3505"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-3511",
+          "ap2ID": "id-3512"
+        },
+        {
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-3512",
+          "ap2ID": "id-3510"
         }
-    ],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-12-31T10:23:39.329Z",
+        "privateRepo": false,
+        "repoName": "Fillet",
+        "dateCreated": "2025-09-11T17:53:30Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/alzatin/Fillet/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "af7414ca-2d93-4ac0-abbd-27feee4ef8f1",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/Fillet",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739615",
+        "ranking": 0.9,
+        "searchField": "fillet alzatin fillet operation: receives a 3d shape and fillets the shape by a given value.  abundance-tool",
+        "owner": "alzatin",
+        "description": "Fillet operation: Receives a 3D shape and fillets the shape by a given value. ",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Inches",
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.6283595922150139,
+      "y": 0.676737160120846,
+      "uniqueID": "id-3540",
+      "name": "Fillet",
+      "ioValues": [
+        {
+          "name": "Fillet val",
+          "ioValue": 0.5
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-3541"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.5181236673773987,
+          "y": 0.4924471299093656,
+          "uniqueID": "id-3542",
+          "ioValues": [
+            {
+              "name": "fillet",
+              "ioValue": 0.5
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n         {inputName: \"shape2\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n      console.log(importedShape)\n      if (!importedShape){\n        importedShape =library[shape2]\n      }\n      //This makes a new copy of the shape and moves it in the X direction\n      //let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n      let filletAssembly =  await Fillet(importedShape, fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletAssembly],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.19632495164410058,
+          "y": 0.38253012048192775,
+          "uniqueID": "id-3543",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.32941176470588235,
+          "y": 0.2054380664652568,
+          "uniqueID": "id-3544",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.16,
+          "uniqueID": "id-3545",
+          "name": "3D-Shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.256,
+          "uniqueID": "id-3546",
+          "name": "Fillet val",
+          "type": "number"
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.5226890756302521,
+          "y": 0.2779456193353474,
+          "uniqueID": "id-3547",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.20682302771855013,
+          "y": 0.8096676737160121,
+          "uniqueID": "id-3548",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10
+            },
+            {
+              "name": "y length",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.3521008403361344,
+          "y": 0.7885196374622356,
+          "uniqueID": "id-3549",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 2
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-3542",
+          "ap2ID": "id-3541"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-3543",
+          "ap2ID": "id-3544"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-3544",
+          "ap2ID": "id-3547"
+        },
+        {
+          "ap2Name": "shape2",
+          "ap1ID": "id-3544",
+          "ap2ID": "id-3542"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-3545",
+          "ap2ID": "id-3542"
+        },
+        {
+          "ap2Name": "fillet",
+          "ap1ID": "id-3546",
+          "ap2ID": "id-3542"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-3548",
+          "ap2ID": "id-3549"
+        },
+        {
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-3549",
+          "ap2ID": "id-3547"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-12-31T10:23:39.329Z",
+        "privateRepo": false,
+        "repoName": "Fillet",
+        "dateCreated": "2025-09-11T17:53:30Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/alzatin/Fillet/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "af7414ca-2d93-4ac0-abbd-27feee4ef8f1",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/Fillet",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739615",
+        "ranking": 0.9,
+        "searchField": "fillet alzatin fillet operation: receives a 3d shape and fillets the shape by a given value.  abundance-tool",
+        "owner": "alzatin",
+        "description": "Fillet operation: Receives a 3D shape and fillets the shape by a given value. ",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/Fillet/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Inches",
+      "fileTypeVersion": 1
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "height",
+      "ap1ID": "id-1619",
+      "ap2ID": "id-3468"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1663",
+      "ap2ID": "id-1667"
+    },
+    {
+      "ap2Name": "3D-Shape",
+      "ap1ID": "id-1667",
+      "ap2ID": "id-3513"
+    },
+    {
+      "ap2Name": "3D-Shape",
+      "ap1ID": "id-1667",
+      "ap2ID": "id-3540"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-3468",
+      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-3486",
+      "ap2ID": "id-3468"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
