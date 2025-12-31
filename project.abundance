@@ -469,6 +469,11 @@
       "ap2ID": "id-1667"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1663",
+      "ap2ID": "id-3468"
+    },
+    {
       "ap2Name": "3D-Shape",
       "ap1ID": "id-1667",
       "ap2ID": "id-3513"
@@ -482,11 +487,6 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-3468",
       "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-3486",
-      "ap2ID": "id-3468"
     }
   ],
   "unitsKey": "MM",
